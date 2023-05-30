@@ -25,7 +25,7 @@ exports.createSauce = (req, res, next) => {
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
     Newsauce.save()
-        .then(() => { res.status(201).json({ message: 'Sauce enregistré !' }) })
+        .then(() => { res.status(201).json({ message: 'Sauce Saved !' }) })
         .catch(error => { res.status(400).json({ error }) })
 };
 
